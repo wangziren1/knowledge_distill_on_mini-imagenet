@@ -51,7 +51,7 @@ In the next experiments, we will use the "cosinlr + warmup 1 epoch" setting.
 | 78.84              |79.1                | 80.83              |
 
 Distill the knowledge in shufflenet_v2_x2_0 to shufflenet_v2_x1_0. T represents temperature and alpha represents the weight of softloss(totalloss = alpha*softloss + (1-alpha)*hardloss).
-| alpah\T |    1  |  3     | 5     | 10    |
+| alpha\T |    1  |  3     | 5     | 10    |
 | :---:   | :---:| :---: | :---: | :---: |
 | 0.9     | 79.64 | 81.10 | 80.65 | 80.875 |
 | 0.7     |       | 81.27 |       |        |
@@ -65,7 +65,7 @@ When T = 3 and alpha = 0.6, we get the hightest accuracy. In the resnet experime
 | 79.11    | 81       | 81.79    |
 
 Distill the knowledge in resnet50 to resnet18  
-| alpah\T |    3 |
+| alpha\T |    3 |
 | :---:   | :---:|
 | 0.6     | 82.45 |
 # Some findings

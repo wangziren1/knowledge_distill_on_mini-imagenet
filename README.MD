@@ -36,6 +36,7 @@ python3 kd.py --arch shufflenet_v2_x1_0 --big shufflenet_v2_x2_0 --workers 8 --e
 
 # Results
 ## tricks
+We do some tricks experiments on shufflenet_v2_x1_0 model.
 | tricks | accuracy |
 | :---:  | :---:  |
 | steplr | 76.71 |
@@ -49,7 +50,7 @@ In the next experiments, we will use the "cosinlr + warmup 1 epoch" setting.
 | :---:              | :---:              | :---:              |
 | 78.84              |79.1                | 80.83              |
 
-Distill the knowledge in shufflenet_v2_x2_0 to shufflenet_v2_x1_0. T represents temperature and alpha represents the weight of softloss.
+Distill the knowledge in shufflenet_v2_x2_0 to shufflenet_v2_x1_0. T represents temperature and alpha represents the weight of softloss(totalloss = alpha*softloss + (1-alpha)*hardloss).
 | alpah\T |    1  |  3     | 5     | 10    |
 | :---:   | :---:| :---: | :---: | :---: |
 | 0.9     | 79.64 | 81.10 | 80.65 | 80.875 |
